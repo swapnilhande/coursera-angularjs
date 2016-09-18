@@ -4,8 +4,10 @@
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <!-- Added bonus items 1 & 2, changing the border color and text color-->
     <style>
       .message { font-size: 1.3em; font-weight: bold; color: {{color}}}
+      .input {border-color: {{color}}}
     </style>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
@@ -17,7 +19,7 @@
          <div class="form-group">
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control" ng-model="dishes">
+             class="form-control input" ng-model="dishes">
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkIfTooMuch();">Check If Too Much</button>
