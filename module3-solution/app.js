@@ -27,6 +27,8 @@ function NarrowItDownController(MenuSearchServiceFactory) {
   var service = MenuSearchServiceFactory();
   controller.found = [];
   controller.getMatchedMenuItems = function() {
+    console.log("clicked");
+    console.log('Found:' controller.found);
     var promise = service.getMatchedMenuItems();
     promise.then(function(response){
       var data = response.data;
