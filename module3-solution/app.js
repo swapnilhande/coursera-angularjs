@@ -23,6 +23,7 @@ function FoundItems() {
 NarrowItDownController.$inject = ['MenuSearchServiceFactory'];
 function NarrowItDownController(MenuSearchServiceFactory) {
   var controller = this;
+  controller.searchTerm = "";
   var service = MenuSearchServiceFactory();
   controller.found = [];
   controller.getMatchedMenuItems = function() {
