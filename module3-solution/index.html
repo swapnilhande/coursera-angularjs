@@ -1,13 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="NarrowItDownApp">
   <head>
     <title>Narrow Down Your Menu Choice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="app.js"></script>
   </head>
 <body>
-   <div class="container">
+   <div class="container" ng-controller="NarrowItDownController as controller">
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
     <div class="form-group">
@@ -17,11 +19,11 @@
       <button class="btn btn-primary">Narrow It Down For Me!</button>
     </div>
 
-    <!-- Bonus loader (see Bonus section of the assignment) -->
-    <items-loader-indicator></items-loader-indicator>
+    <!-- Bonus loader (see Bonus section of the assignment)
+    <items-loader-indicator></items-loader-indicator> -->
 
     <!-- found-items should be implemented as a component -->
-    <found-items found-items="...." on-remove="...."></found-items>
+    <found-items found-items="controller.found" on-remove="controller.removeItem(index)"></found-items>
   </div>
 
 </body>
