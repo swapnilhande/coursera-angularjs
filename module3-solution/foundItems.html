@@ -1,11 +1,10 @@
 <div class="col-md-12">
   <ol>
-    console.log("directive");
   <li ng-repeat="item in list.foundMenuItems">
     {{item.name}}, {{item.short_name}}, {{ item.description }}
     <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
   </li>
 </ol>
 
-<div class="error" ng-if="list.foundMenuItems.length==0">Nothing Found</div>
+<div class="error" ng-if="list.isEmpty()">Nothing Found</div>
 </div>
