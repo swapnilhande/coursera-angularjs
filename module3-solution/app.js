@@ -11,7 +11,7 @@ function FoundItems() {
     templateUrl: 'foundItems.html',
     restrict: 'E',
     scope: {
-      foundMenuItems: '<',
+      foundtems: '<',
       onRemove: '&'
     },
     controller: FoundItemsDirectiveController,
@@ -26,7 +26,7 @@ function FoundItems() {
 function FoundItemsDirectiveController() {
   var list = this;
   list.isEmpty = function() {
-    console.log('new');
+    console.log('newwe');
     return list.foundItems === undefined || list.foundItems.length ==0;
   }
 
