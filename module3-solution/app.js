@@ -31,8 +31,8 @@ function NarrowItDownController(MenuSearchService) {
     promise.then(function(response){
       var data = response.data;
       console.log(data);
-      for(var i=0; i< data.length; i++) {
-        controller.found.push(data[i]);
+      for(var i=0; i< data.menu_items.length; i++) {
+        controller.found.push(data.menu_items[i]);
       }
       //controller.found = data;
     })
