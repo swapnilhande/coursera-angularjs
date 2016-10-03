@@ -44,7 +44,7 @@ function NarrowItDownController(MenuSearchServiceFactory) {
   };
 };
 
-MenuSearchService.inject = ['$http']
+MenuSearchService.$inject = ['$http']
 function MenuSearchService($http) {
     var service = this;
 
