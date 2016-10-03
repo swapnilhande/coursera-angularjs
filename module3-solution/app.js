@@ -11,7 +11,8 @@ function FoundItems() {
     templateUrl: 'foundItems.html',
     scope: {
       foundMenuItems: '<',
-      onRemove: '&'
+      onRemove: '&',
+      myList: '=myList'
     }
   };
 
