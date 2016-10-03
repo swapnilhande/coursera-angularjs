@@ -30,7 +30,7 @@ function NarrowItDownController(MenuSearchService) {
     var promise = MenuSearchService.getMatchedMenuItems();
     promise.then(function(response){
       var data = response.data;
-      console.log(data);
+      console.log(data.menu_items);
       for(var i=0; i< data.menu_items.length; i++) {
         controller.found.push(data.menu_items[i]);
       }
