@@ -33,7 +33,6 @@ function NarrowItDownController(MenuSearchService) {
       for(var i=0; i< data.menu_items.length; i++) {
         controller.found.push(data.menu_items[i]);
       }
-      //controller.found = data;
     })
     .catch(function(error){
       console.log(error);
@@ -41,6 +40,7 @@ function NarrowItDownController(MenuSearchService) {
     };
 
     controller.removeItem = function (itemIndex) {
+      console.log("clicked: " + itemIndex);
       controller.found.splice(itemIndex, 1);
   };
 };
