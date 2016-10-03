@@ -9,6 +9,7 @@ angular.module('NarrowItDownApp', [])
 function FoundItems() {
   var ddo = {
     templateUrl: 'foundItems.html',
+    restrict: 'E',
     scope: {
       foundMenuItems: '<',
       onRemove: '&'
@@ -25,7 +26,8 @@ function FoundItems() {
 function FoundItemsDirectiveController() {
   var list = this;
   list.isEmpty = function() {
-    return list.foundMenuItems === undefined || list.foundMenuItems.length ==0;
+    console.log('new');
+    return list.foundItems === undefined || list.foundItems.length ==0;
   }
 
 }
