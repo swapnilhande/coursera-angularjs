@@ -3,7 +3,7 @@
 
 angular.module('NarrowItDownApp', [])
 .controller('NarrowItDownController', NarrowItDownController)
-.factory('MenuSearchServiceFactory', MenuSearchServiceFactory)
+.service('MenuSearchService', MenuSearchService)
 .directive('foundItems', FoundItems);
 
 function FoundItems() {
@@ -20,16 +20,15 @@ function FoundItems() {
 
 
 
-NarrowItDownController.$inject = ['MenuSearchServiceFactory'];
-function NarrowItDownController(MenuSearchServiceFactory) {
+NarrowItDownController.$inject = ['MenuSearchService'];
+function NarrowItDownController(MenuSearchService) {
   var controller = this;
   controller.searchTerm = "";
-  var service = MenuSearchServiceFactory();
   controller.found = [];
   controller.getMatchedMenuItems = function() {
     console.log("clicked");
     console.log(controller.found);
-    var promise = service.getMatchedMenuItems();
+    var promise = MenuSearchService.getMatchedMenuItems();
     promise.then(function(response){
       var data = response.data;
       controller.found = data;
