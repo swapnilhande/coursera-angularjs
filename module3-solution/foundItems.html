@@ -1,7 +1,11 @@
-<ol>
+<div class="form-group">
+  <ol>
   <li ng-repeat="item in myList.found">
      {{ item }}
     <button ng-click="myList.onRemove({index: $index});">Don't want this one!</button>
   </li>
 </ol>
+</div>
+<div class="form-group">
 <div class="error" ng-if="myList.found.length==0">Nothing Found</div>
+</div>
