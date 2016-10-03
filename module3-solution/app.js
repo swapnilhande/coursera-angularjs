@@ -36,8 +36,8 @@ function NarrowItDownController(MenuSearchService) {
       var data = response.data;
       for(var i=0; i< data.menu_items.length; i++) {
         var item = data.menu_items[i];
-        if (item.name.toLowerCase().indexOf(controller.searchTerm) !== -1) {
-          controller.found.push(item);
+        if (item.description.toLowerCase().indexOf(controller.searchTerm) !== -1) {
+          controller.found.push(item.description);
        }
       }
     })

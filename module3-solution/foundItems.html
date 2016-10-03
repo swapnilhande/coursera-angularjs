@@ -1,7 +1,7 @@
 <div class="form-group">
   <ol>
   <li ng-repeat="item in myList.found">
-     {{ item.name }}
+     {{ item }}
     <button ng-click="myList.removeItem({index: $index});">Don't want this one!</button>
   </li>
 </ol>
