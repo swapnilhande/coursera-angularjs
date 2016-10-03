@@ -25,7 +25,7 @@ function FoundItems() {
 function FoundItemsDirectiveController() {
   var list = this;
   list.isEmpty = function() {
-    console.log(list.foundMenuItems);
+    console.log("list: " + list);
     return list.foundMenuItems.length;
   }
 
