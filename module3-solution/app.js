@@ -43,27 +43,17 @@ function NarrowItDownController(MenuSearchService) {
   };
 };
 
-MenuSearchService.$inject = ['$http']
+MenuSearchService.$inject = ['$http'];
 function MenuSearchService($http) {
     var service = this;
 
     service.getMatchedMenuItems = function () {
       var response = $http({
         method: 'GET',
-        URL: 'https://davids-restaurant.herokuapp.com/menu_items.json',
+        url: 'https://davids-restaurant.herokuapp.com/menu_items.json',
       });
       return response;
     }
 };
-
-
-
-function MenuSearchServiceFactory() {
-  var factory = function () {
-    return new MenuSearchService();
-  };
-
-  return factory;
-}
 
 })();
